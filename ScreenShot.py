@@ -3,7 +3,7 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
- 
+
 # Configurações do Chrome
 chrome_options = Options()
 chrome_options.add_argument(
@@ -21,10 +21,10 @@ url = "https://app.powerbi.com/view?r=eyJrIjoiNDI3NGFlNWEtYTU4NC00MWFlLWE0ZTMtZD
 driver.get(url)
 time.sleep(20)
 # Tira a captura de tela
-screenshot_path = "captura_de_tela.png"
+screenshot_path = "Screenshot.png"
 driver.save_screenshot(screenshot_path)
 
 # Fecha o navegador
 driver.quit()
 
-print(f"Captura de tela salva em: {screenshot_path}")
+print(f"Screenshot saved in:{screenshot_path}")
