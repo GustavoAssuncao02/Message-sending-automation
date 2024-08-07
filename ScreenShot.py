@@ -22,7 +22,10 @@ driver.get(url)
 time.sleep(20)
 # Tira a captura de tela
 screenshot_path = "Screenshot.png"
-driver.save_screenshot(screenshot_path)
+try:
+    driver.save_screenshot(screenshot_path)
+except Exception as e:
+    print("Erro ao salvar imagem: ", (e))
 
 # Fecha o navegador
 driver.quit()

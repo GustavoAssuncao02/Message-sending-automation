@@ -63,7 +63,7 @@ def send_whatsapp_message():
 
         time.sleep(2)
 
-        image_path = "C:/Users/Gustavo/Documents/TI/Projetos/Message_sending_automation/captura_de_tela.png"  # Caminho da imagem
+        image_path = "C:/Users/Gustavo/Documents/TI/Projetos/Message_sending_automation/Screenshot.png"  # Caminho da imagem
         logging.info(f"Using the image path: {image_path}")
 
         image_input = WebDriverWait(driver, 60).until(
@@ -79,6 +79,7 @@ def send_whatsapp_message():
         send_button.click()
 
         logging.info("Image sent successfully!")
+
     except Exception as e:
         logging.error(f"An error has occurred: {e}")
 
